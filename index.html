@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BA Eats — Buenos Aires Restaurant Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <div class="hero" id="hero">
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Buenos Aires · Expert System</div>
+      <h1 class="hero-title">BA<br><span class="accent">Eats</span></h1>
+      <p class="hero-sub">Answer a few questions.<br>Find your perfect restaurant.</p>
+      <button class="btn-start" id="btnStart">Start &rarr;</button>
+    </div>
+    <div class="hero-deco">
+      <span class="deco-circle c1"></span>
+      <span class="deco-circle c2"></span>
+      <span class="deco-circle c3"></span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ QUIZ PANEL ═══════════════════════════ -->
+  <div class="quiz-panel hidden" id="quizPanel">
+
+    <!-- Progress bar -->
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="progress-label" id="progressLabel">Question 1</div>
+
+    <!-- Question card -->
+    <div class="card" id="questionCard">
+      <div class="card-inner">
+        <div class="q-number" id="qNumber">01</div>
+        <h2 class="q-label" id="qLabel">Loading…</h2>
+        <div class="options-grid" id="optionsGrid"></div>
+      </div>
+    </div>
+
+    <!-- Back / restart -->
+    <button class="btn-ghost" id="btnRestart">↺ Start over</button>
+  </div>
+
+  <!-- ═══════════════════════════ RESULTS PANEL ═══════════════════════════ -->
+  <div class="results-panel hidden" id="resultsPanel">
+    <div class="results-header">
+      <div class="results-tag">Your match</div>
+      <h2 class="results-title" id="resultsTitle">We found it.</h2>
+      <p class="results-sub" id="resultsSub"></p>
+    </div>
+
+    <div class="results-grid" id="resultsGrid"></div>
+
+    <button class="btn-start" id="btnAgain">Try again &rarr;</button>
+  </div>
+
+  <!-- ═══════════════════════════ NO-MATCH PANEL ═══════════════════════════ -->
+  <div class="nomatch-panel hidden" id="nomatchPanel">
+    <div class="nomatch-icon">🕵️</div>
+    <h2>No exact match found</h2>
+    <p>Try adjusting your preferences — maybe loosen the budget or distance.</p>
+    <button class="btn-start" id="btnRetry">Try again &rarr;</button>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

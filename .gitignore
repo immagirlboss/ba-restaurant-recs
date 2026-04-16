@@ -1,0 +1,27 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# macOS
+.DS_Store
+
+# Flask / local env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/

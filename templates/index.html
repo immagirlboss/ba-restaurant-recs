@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Eats | Buenos Aires Restaurant Expert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Using a clean, humanist font pair -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BA Eats</h1>
+            <p class="subtitle">Finding your perfect table in Buenos Aires</p>
+        </div>
+    </header>
+
+    <main id="app">
+        <!-- Initial View -->
+        <section id="hero" class="view">
+            <div class="card intro-card">
+                <h2>Expert Recommendation</h2>
+                <p>Answer a few questions and our expert system will find the best restaurant for your mood and preferences.</p>
+                <button id="start-btn" class="primary-btn">Start Questionnaire</button>
+            </div>
+        </section>
+
+        <!-- Question View -->
+        <section id="question-container" class="view hidden">
+            <div class="progress-bar">
+                <div id="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="card question-card">
+                <h3 id="question-text">Question loading...</h3>
+                <div id="options-grid" class="options-grid"></div>
+            </div>
+        </section>
+
+        <!-- Results View -->
+        <section id="results-container" class="view hidden">
+            <div class="results-header">
+                <h2>Our Recommendations</h2>
+                <button id="reset-btn" class="secondary-btn">Start Over</button>
+            </div>
+            <div id="results-list" class="results-grid"></div>
+        </section>
+
+        <!-- Empty State View -->
+        <section id="empty-state" class="view hidden">
+            <div class="card empty-card">
+                <h2>No matches found</h2>
+                <p>Your filters might be a bit too specific for our current knowledge base. Try being more flexible with some preferences!</p>
+                <button id="retry-btn" class="primary-btn">Try Again</button>
+            </div>
+        </section>
+
+        <!-- Loading View -->
+        <section id="loading-view" class="view hidden">
+            <div class="loader">
+                <div class="dots"></div>
+                <p>Consulting our expert system...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BA Eats - Built with Python & Prolog</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
