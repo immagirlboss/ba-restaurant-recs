@@ -6,7 +6,6 @@ app = Flask(__name__)
 app.secret_key = "ba_eats_secret_key_12345" # In production, use a secure random key
 
 # In-memory storage for active sessions
-# In a larger app, this might be Redis or a database
 sessions = {}
 
 def get_session():
